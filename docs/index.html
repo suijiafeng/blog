@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <ul data-index="1">
+            <li class="home"></li>
+            <li v-if="flag" class="about"></li>
+            <li v-text="msg"></li>
+            <li v-html="person.name"></li>
+            <li>
+                <a href="/index.html">123444</a>
+            </li>
+        </ul>
+        {{msg}}
+    </div>
+</body>
+<script src="./index.js"></script>
+<script>
+    let vm = new MyVue({
+        el: '#app',
+        data: {
+            msg: 'hello,world',
+            flag:true,
+            person:{
+                name: 'xia小马哥',
+                age:'18',
+                adress:'北京市'
+            }
+        }
+    })
+</script>
+
+</html>
